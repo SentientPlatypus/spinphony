@@ -1,0 +1,764 @@
+{
+  "scriptCompleted": true,
+  "name": "spinphony",
+  "rawDescription": "",
+  "readmeHead": "# Spinphony\n\n![Spinphony hardware model](model.png)\n\nSpinphony is an ECE 3140 final project that turns computer audio into live motor music. A Python host pipeline captures system audio, detects notes with an STFT, and streams motor frequency frames to an FRDM-KL46Z microcontroller. The board drives four NEMA17 stepper motors through DRV8825 drivers, making the motors act like a rough electromechanical speaker.\n\nBuilt by Ibrahim Ahmed, Geneustace Wicaksono, and Ibrahim Alyamani.\n\n## Demo\n",
+  "languages": [
+    "c",
+    "cpp",
+    "html",
+    "launch",
+    "markdown",
+    "prefs",
+    "python",
+    "unknown",
+    "xml",
+    "yaml"
+  ],
+  "frameworks": [],
+  "files": [
+    {
+      "path": "_config.yml",
+      "language": "yaml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "index_old.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 3127,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/.cproject",
+      "language": "unknown",
+      "sizeLines": 716,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/.project",
+      "language": "unknown",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/.settings/language.settings.xml",
+      "language": "xml",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/.settings/org.eclipse.core.resources.prefs",
+      "language": "prefs",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/board.c",
+      "language": "c",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/board.h",
+      "language": "cpp",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/clock_config.c",
+      "language": "c",
+      "sizeLines": 298,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/clock_config.h",
+      "language": "cpp",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/peripherals.c",
+      "language": "c",
+      "sizeLines": 410,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/peripherals.h",
+      "language": "cpp",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/pin_mux.c",
+      "language": "c",
+      "sizeLines": 863,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/board/pin_mux.h",
+      "language": "cpp",
+      "sizeLines": 332,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_common_tables.h",
+      "language": "cpp",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_const_structs.h",
+      "language": "cpp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_math.h",
+      "language": "cpp",
+      "sizeLines": 7157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armcc.h",
+      "language": "cpp",
+      "sizeLines": 870,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armclang.h",
+      "language": "cpp",
+      "sizeLines": 1877,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_compiler.h",
+      "language": "cpp",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_gcc.h",
+      "language": "cpp",
+      "sizeLines": 2088,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_iccarm.h",
+      "language": "cpp",
+      "sizeLines": 913,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_version.h",
+      "language": "cpp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mbl.h",
+      "language": "cpp",
+      "sizeLines": 1896,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mml.h",
+      "language": "cpp",
+      "sizeLines": 2960,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/core_cm0plus.h",
+      "language": "cpp",
+      "sizeLines": 1023,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/fsl_device_registers.h",
+      "language": "cpp",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4_features.h",
+      "language": "cpp",
+      "sizeLines": 1707,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4.h",
+      "language": "cpp",
+      "sizeLines": 7849,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv7.h",
+      "language": "cpp",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv8.h",
+      "language": "cpp",
+      "sizeLines": 333,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/system_MKL46Z4.c",
+      "language": "c",
+      "sizeLines": 228,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/CMSIS/system_MKL46Z4.h",
+      "language": "cpp",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.c",
+      "language": "c",
+      "sizeLines": 1688,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.h",
+      "language": "cpp",
+      "sizeLines": 1440,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.c",
+      "language": "c",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h",
+      "language": "cpp",
+      "sizeLines": 576,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_flash.h",
+      "language": "cpp",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_adapter.h",
+      "language": "cpp",
+      "sizeLines": 425,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.c",
+      "language": "c",
+      "sizeLines": 567,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.h",
+      "language": "cpp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.c",
+      "language": "c",
+      "sizeLines": 1404,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h",
+      "language": "cpp",
+      "sizeLines": 836,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_features.h",
+      "language": "cpp",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.c",
+      "language": "c",
+      "sizeLines": 1204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.h",
+      "language": "cpp",
+      "sizeLines": 639,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.c",
+      "language": "c",
+      "sizeLines": 438,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.h",
+      "language": "cpp",
+      "sizeLines": 592,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_utilities.h",
+      "language": "cpp",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_gpio.c",
+      "language": "c",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_gpio.h",
+      "language": "cpp",
+      "sizeLines": 594,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_i2c.c",
+      "language": "c",
+      "sizeLines": 2005,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_i2c.h",
+      "language": "cpp",
+      "sizeLines": 821,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_lpsci.c",
+      "language": "c",
+      "sizeLines": 1126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_lpsci.h",
+      "language": "cpp",
+      "sizeLines": 769,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_port.h",
+      "language": "cpp",
+      "sizeLines": 497,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_smc.c",
+      "language": "c",
+      "sizeLines": 437,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_smc.h",
+      "language": "cpp",
+      "sizeLines": 451,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_uart.c",
+      "language": "c",
+      "sizeLines": 1356,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/drivers/fsl_uart.h",
+      "language": "cpp",
+      "sizeLines": 808,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/MKL46Z4_Project_FINALPROJECT PE Debug.launch",
+      "language": "launch",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/MKL46Z4_Project_FINALPROJECT.launch",
+      "language": "launch",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/app.c",
+      "language": "c",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/app.h",
+      "language": "cpp",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/constants.h",
+      "language": "cpp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/main.c",
+      "language": "c",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/motor.c",
+      "language": "c",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/motor.h",
+      "language": "cpp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/serial_stream.c",
+      "language": "c",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/source/serial_stream.h",
+      "language": "cpp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/startup/startup_mkl46z4.c",
+      "language": "c",
+      "sizeLines": 549,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h",
+      "language": "cpp",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console.c",
+      "language": "c",
+      "sizeLines": 366,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console.h",
+      "language": "cpp",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.c",
+      "language": "c",
+      "sizeLines": 815,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.h",
+      "language": "cpp",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.c",
+      "language": "c",
+      "sizeLines": 587,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.h",
+      "language": "cpp",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.c",
+      "language": "c",
+      "sizeLines": 1327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.h",
+      "language": "cpp",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 151,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "stft/audio_input.py",
+      "language": "python",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stft/live_ui.py",
+      "language": "python",
+      "sizeLines": 325,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stft/main.py",
+      "language": "python",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stft/motor_serial.py",
+      "language": "python",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stft/stft.py",
+      "language": "python",
+      "sizeLines": 373,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 87,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "moderate",
+  "importMap": {
+    "MKL46Z4_Project_FINALPROJECT/.cproject": [],
+    "MKL46Z4_Project_FINALPROJECT/.project": [],
+    "MKL46Z4_Project_FINALPROJECT/.settings/language.settings.xml": [],
+    "MKL46Z4_Project_FINALPROJECT/.settings/org.eclipse.core.resources.prefs": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/core_cm0plus.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/system_MKL46Z4.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4_features.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_common_tables.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_math.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_const_structs.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_math.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_common_tables.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/arm_math.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/core_cm0plus.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mbl.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mml.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armcc.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armclang.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_compiler.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armcc.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_armclang.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_gcc.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_iccarm.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_gcc.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_iccarm.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_version.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mbl.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_version.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_compiler.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv8.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/core_armv8mml.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_version.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_compiler.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv8.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/core_cm0plus.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_version.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/cmsis_compiler.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv7.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/fsl_device_registers.h": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4.h",
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/MKL46Z4_features.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv7.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/mpu_armv8.h": [],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/system_MKL46Z4.c": [
+      "MKL46Z4_Project_FINALPROJECT/CMSIS/fsl_device_registers.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/CMSIS/system_MKL46Z4.h": [],
+    "MKL46Z4_Project_FINALPROJECT/MKL46Z4_Project_FINALPROJECT PE Debug.launch": [],
+    "MKL46Z4_Project_FINALPROJECT/MKL46Z4_Project_FINALPROJECT.launch": [],
+    "MKL46Z4_Project_FINALPROJECT/board/board.c": [
+      "MKL46Z4_Project_FINALPROJECT/board/clock_config.h",
+      "MKL46Z4_Project_FINALPROJECT/board/board.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/board/board.h": [
+      "MKL46Z4_Project_FINALPROJECT/board/clock_config.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/board/clock_config.c": [
+      "MKL46Z4_Project_FINALPROJECT/board/clock_config.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/board/clock_config.h": [],
+    "MKL46Z4_Project_FINALPROJECT/board/peripherals.c": [
+      "MKL46Z4_Project_FINALPROJECT/board/peripherals.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/board/peripherals.h": [],
+    "MKL46Z4_Project_FINALPROJECT/board/pin_mux.c": [
+      "MKL46Z4_Project_FINALPROJECT/board/pin_mux.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/board/pin_mux.h": [],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_clock.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_flash.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_adapter.h": [],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_cache.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_features.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_utilities.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_features.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_adapter.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flash.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_flexnvm.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_controller.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_ftfx_utilities.h": [],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_gpio.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_gpio.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_gpio.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_i2c.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_i2c.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_i2c.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_lpsci.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_lpsci.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_lpsci.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_port.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_smc.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_smc.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_flash.h",
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_smc.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_uart.c": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_uart.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/drivers/fsl_uart.h": [
+      "MKL46Z4_Project_FINALPROJECT/drivers/fsl_common.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/app.c": [
+      "MKL46Z4_Project_FINALPROJECT/source/motor.h",
+      "MKL46Z4_Project_FINALPROJECT/source/serial_stream.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/app.h": [],
+    "MKL46Z4_Project_FINALPROJECT/source/constants.h": [],
+    "MKL46Z4_Project_FINALPROJECT/source/main.c": [
+      "MKL46Z4_Project_FINALPROJECT/source/app.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/motor.c": [
+      "MKL46Z4_Project_FINALPROJECT/source/motor.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/motor.h": [
+      "MKL46Z4_Project_FINALPROJECT/source/constants.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/serial_stream.c": [
+      "MKL46Z4_Project_FINALPROJECT/source/serial_stream.h",
+      "MKL46Z4_Project_FINALPROJECT/source/constants.h",
+      "MKL46Z4_Project_FINALPROJECT/source/motor.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/source/serial_stream.h": [],
+    "MKL46Z4_Project_FINALPROJECT/startup/startup_mkl46z4.c": [],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console.c": [
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console.h": [],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h": [],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.c": [
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.h": [],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.c": [
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_io.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_log.h": [],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.c": [
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.h",
+      "MKL46Z4_Project_FINALPROJECT/utilities/fsl_debug_console_conf.h"
+    ],
+    "MKL46Z4_Project_FINALPROJECT/utilities/fsl_str.h": [],
+    "README.md": [],
+    "_config.yml": [],
+    "index.html": [],
+    "index_old.md": [],
+    "stft/audio_input.py": [],
+    "stft/live_ui.py": [],
+    "stft/main.py": [],
+    "stft/motor_serial.py": [],
+    "stft/stft.py": []
+  }
+}
