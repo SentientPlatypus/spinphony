@@ -1,12 +1,12 @@
 # Spinphony
-
+![alt text](model.png)
 ECE 3140 final project by Ibrahim Ahmed, Geneustace Wicaksono, and Ibrahim Alyamani.
 
 Spinphony turns computer audio into live motor music using an STFT-based host pipeline, an FRDM-KL46Z microcontroller, DRV8825 stepper drivers, and four NEMA17 motors coupled to resonance chambers.
 
 ## Links
 
-- Project webpage: https://pages.github.coecis.cornell.edu/ece3140-spr2026/gjw62-ia285-iaa39/
+- Project webpage: https://sentientplatypus.github.io/spinphony/
 - Demo/sample playlist: https://www.youtube.com/playlist?list=PL1kjgJJbafhrtG4_A-ouzDBUkkYVFYieY
 
 
